@@ -24,9 +24,6 @@
 • **Cypress** *(Ferramenta de teste)*
 <br/>
 
-## 
-<img  alt="TesteE2E" width="700" src="https://github.com/roodrigoomendes/Teste_QA_fiabilite/blob/master/MagazineLuiza.gif?raw=true">
-
 ## Clone para Execução
 
 Clone este repositório para sua máquina local usando comando abaixo:
