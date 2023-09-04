@@ -17,21 +17,21 @@ describe('login Usuário', () => {
 
     cy.wait(5000)
     
-    // Aguarde até que o modal do carrinho esteja visível (você pode ajustar o seletor conforme necessário)
-    cy.get('.action.showcart').click().should('be.visible').get('#top-cart-btn-checkout').click() // Substitua '.modal-carrinho' pelo seletor correto
+    // Aguarde até que o modal do carrinho esteja visível 
+    cy.get('.action.showcart').click().should('be.visible').get('#top-cart-btn-checkout').click() 
 
+    //aguarde até a página ser carregada
     cy.wait(5000)
 
     cy.contains('Shipping Address').should('be.visible');
 
-    // Preencheendo o formulário de cadastrocustomer-email
+    // Preencheendo o formulário para finalizar compra
     cy.get('#customer-email').type('seu-email@exemplo.com')
     cy.get('input[name="firstname"]').type('Test Name')
     cy.get('input[name="lastname"]').type('Test LastName')
     cy.get('input[name="street[0]"]').type('Rua xxx')
     cy.get('select').eq(0).select('US')
     cy.get('select').eq(1).select('2')
-
     cy.get('input[name="city"]').type('test City')
     cy.get('input[name="postcode"]').type('12345-6789')
     cy.get('input[name="telephone"]').type('54845155484')
@@ -39,6 +39,8 @@ describe('login Usuário', () => {
     cy.get('.button.action.continue.primary').click();
 
     cy.wait(5000)
+
+    //confirmar a compra
 
     cy.contains('Payment Method').should('be.visible');
 
